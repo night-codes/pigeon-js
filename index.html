@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Pigeon-js by avxto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Pigeon-js</h1>
+      <h2 class="project-tagline">Pigeon is an HTML preprocessor written in Javascript.</h2>
+      <a href="https://github.com/avxto/pigeon-js" class="btn">View on GitHub</a>
+      <a href="https://github.com/avxto/pigeon-js/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/avxto/pigeon-js/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="pigeon" class="anchor" href="#pigeon" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pigeon</h1>
+
+<p>Pigeon is an HTML preprocessor written in Javascript.</p>
+
+<h1>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h1>
+
+<p><code>npm install pigeon-js</code></p>
+
+<h1>
+<a id="about" class="anchor" href="#about" aria-hidden="true"><span class="octicon octicon-link"></span></a>About</h1>
+
+<p>Pigeon is an HTML preprocessor. However, you do not need to learn a new language — you can stick to Javascript. Pigeon is an alternative to Absurd's HTML preprocessor.</p>
+
+<h1>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h1>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> pigeon <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>pigeon-js<span class="pl-pds">'</span></span>);
+
+<span class="pl-k">var</span> data <span class="pl-k">=</span> {
+    content<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>Content<span class="pl-pds">'</span></span>
+};
+
+<span class="pl-k">var</span> convert <span class="pl-k">=</span> {
+
+    _<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>html<span class="pl-pds">'</span></span>,
+
+    html<span class="pl-k">:</span> {
+        head<span class="pl-k">:</span> {
+            style<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>.example {display: block;}<span class="pl-pds">'</span></span>,
+            title<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>My title<span class="pl-pds">'</span></span>,
+            script<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>function helloWorld () { console.log("Hello World"); }<span class="pl-pds">'</span></span>,
+        },
+
+        body<span class="pl-k">:</span> {
+            <span class="pl-s"><span class="pl-pds">'</span>.main#ID<span class="pl-pds">'</span></span><span class="pl-k">:</span> {
+                <span class="pl-s"><span class="pl-pds">'</span>.child.child<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>Content<span class="pl-pds">'</span></span>,
+                <span class="pl-s"><span class="pl-pds">'</span>.anotherchild<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>Content<span class="pl-pds">'</span></span>,
+                <span class="pl-s"><span class="pl-pds">'</span><span class="pl-en">.lastchild</span><span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-k">function</span>() {
+                    <span class="pl-k">return</span> data.<span class="pl-c1">content</span>;
+                },
+
+            },
+        },
+    }
+
+};
+
+pigeon(convert, <span class="pl-k">function</span>(<span class="pl-smi">err</span>, <span class="pl-smi">html</span>) {
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(html);
+});</pre></div>
+
+<h3>
+<a id="displays" class="anchor" href="#displays" aria-hidden="true"><span class="octicon octicon-link"></span></a>Displays</h3>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;!DOCTYPE html&gt;
+&lt;<span class="pl-ent">html</span>&gt;
+
+&lt;<span class="pl-ent">head</span>&gt;
+<span class="pl-s1">    &lt;<span class="pl-ent">style</span>&gt;</span>
+<span class="pl-s1">        <span class="pl-e">.example</span> {</span>
+<span class="pl-s1">            <span class="pl-c1"><span class="pl-c1">display</span></span>: <span class="pl-c1">block</span>;</span>
+<span class="pl-s1">        }</span>
+<span class="pl-s1">    &lt;/<span class="pl-ent">style</span>&gt;</span>
+    &lt;<span class="pl-ent">title</span>&gt;My title&lt;/<span class="pl-ent">title</span>&gt;
+<span class="pl-s1">    &lt;<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">        <span class="pl-k">function</span> <span class="pl-en">helloWorld</span>() {</span>
+<span class="pl-s1">            <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>Hello World<span class="pl-pds">"</span></span>);</span>
+<span class="pl-s1">        }</span>
+<span class="pl-s1">    &lt;/<span class="pl-ent">script</span>&gt;</span>
+&lt;/<span class="pl-ent">head</span>&gt;
+
+&lt;<span class="pl-ent">body</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>ID<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>main<span class="pl-pds">"</span></span>&gt;
+        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>child<span class="pl-pds">"</span></span>&gt;Content&lt;/<span class="pl-ent">div</span>&gt;
+        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>anotherchild<span class="pl-pds">"</span></span>&gt;Content&lt;/<span class="pl-ent">div</span>&gt;
+        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>lastchild<span class="pl-pds">"</span></span>&gt;Content&lt;/<span class="pl-ent">div</span>&gt;
+    &lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">body</span>&gt;
+
+&lt;/<span class="pl-ent">html</span>&gt;
+</pre></div>
+
+<h1>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h1>
+
+<p>The MIT License is a free software license originating at the Massachusetts Institute of Technology (MIT). It is a permissive free software license, meaning that it permits reuse within proprietary software provided all copies of the licensed software include a copy of the MIT License terms and the copyright notice.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/avxto/pigeon-js">Pigeon-js</a> is maintained by <a href="https://github.com/avxto">avxto</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>

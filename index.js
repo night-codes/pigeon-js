@@ -10,8 +10,7 @@ module.exports = function(obj, callback, options) {
 
     if (obj !== null && typeof obj !== 'object') {
         var error = new TypeError('Expected an object.');
-        callback(error, null);
-        return;
+        return callback(error, null);
     }
 
     var html = pigeon.build(obj);
@@ -23,7 +22,7 @@ module.exports = function(obj, callback, options) {
     }
 
     callback(null, html);
-
+    // Yes, it returns the HTML not the callback
     return html;
 
 };

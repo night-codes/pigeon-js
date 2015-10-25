@@ -5,7 +5,7 @@ Pigeon is an HTML preprocessor written in Javascript.
 ```npm install pigeon-js```
 
 # About 
-PigeonJS is an HTML preprocessor. However, you do not need to learn a new language — you can stick to Javascript.
+Pigeon is an HTML preprocessor. However, you do not need to learn a new language — you can stick to Javascript. Pigeon is an alternative to Absurd's HTML preprocessor.
 
 # Usage 
 

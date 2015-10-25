@@ -1,0 +1,17 @@
+{
+    "name": "pigeon-js",
+    "version": "0.0.34",
+    "description": "HTML preprocessor.",
+    "keywords": [
+        "pigeon",
+        "html",
+        "preprocessor"
+    ],
+    "repository": "https://github.com/avxto/pigeon.git",
+    "author": "Alex Suyun <alexsuyunov@yahoo.com>",
+    "dependencies": {
+        "js-beautify": "*"
+    },
+    "main": "index",
+    "license": "MIT"
+}

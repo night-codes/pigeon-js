@@ -1,5 +1,6 @@
 # Pigeon
 [![Build Status](https://travis-ci.org/avxto/pigeon-js.svg)](https://travis-ci.org/avxto/pigeon-js)
+![Dependencies](https://david-dm.org/avxto/pigeon-js.svg)
 
 Pigeon is an HTML preprocessor written in Javascript.
 

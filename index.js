@@ -1,5 +1,3 @@
-'use strict';
-
 var pigeon = require('./lib/pigeon'),
     beautifyHTML = require('js-beautify').html;
 

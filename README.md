@@ -34,9 +34,7 @@ var convert = {
             '.main#ID': {
                 '.child.child': 'Content',
                 '.anotherchild': 'Content',
-                '.lastchild': function() {
-                    return data.content;
-                },
+                '.lastchild': data.content
 
             },
         },

@@ -5,7 +5,7 @@ var expect = require('chai').expect,
 describe('build', function() {
 
     it('should give an error if param is not object', function(done) {
-        
+
         var data = 'ABCD';
 
         pigeon(data, function(err, html) {
@@ -120,6 +120,16 @@ describe('parse', function() {
 
         expect(parsed.attributes).to.exist;
         expect(parsed.attributes).to.equal(' onclick="doSomething();" href="#"');
+    });
+
+    it('should parse everything combined', function() {
+        var string = 'section.class.anotherclass.BADNA@ME!*&6#ID#anotherID[data-attribute="attribute" onclick="doSomething();"]',
+            parsed = parse(string);
+
+        expect(parsed.attributes).to.exist;
+        expect(parsed.tag).to.exist;
+        expect(parsed.tag).to.equal('section');
+        expect(parsed.attributes).to.equal('id="ID" class="class anotherclass BADNAME6" data-attribute="attribute" onclick="doSomething();"');
     });
 
 });

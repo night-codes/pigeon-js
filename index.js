@@ -20,7 +20,6 @@ module.exports = function(obj, callback, options) {
     }
 
     callback(null, html);
-    // Yes, it returns the HTML not the callback
     return html;
 
 };

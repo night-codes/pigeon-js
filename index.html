@@ -12,20 +12,20 @@
   <body>
     <section class="page-header">
       <h1 class="project-name">Pigeon-js</h1>
-      <h2 class="project-tagline">Pigeon is an HTML preprocessor / template engine written in Javascript.</h2>
+      <h2 class="project-tagline">Pigeon is an HTML preprocessor written in Javascript.</h2>
       <a href="https://github.com/avxto/pigeon-js" class="btn">View on GitHub</a>
       <a href="https://github.com/avxto/pigeon-js/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/avxto/pigeon-js/tarball/master" class="btn">Download .tar.gz</a>
-      <div style="width:100%; white-space: nowrap;">
-        <iframe src="https://ghbtns.com/github-btn.html?user=avxto&repo=pigeon-js&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170px" height="30px"></iframe>
-      </div>
     </section>
 
     <section class="main-content">
       <h1>
 <a id="pigeon" class="anchor" href="#pigeon" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pigeon</h1>
 
-<p>Pigeon is an HTML preprocessor written in Javascript.</p>
+<p><a href="https://travis-ci.org/avxto/pigeon-js"><img src="https://travis-ci.org/avxto/pigeon-js.svg" alt="Build Status"></a>
+<a href="https://david-dm.org/avxto/pigeon-js"><img src="https://david-dm.org/avxto/pigeon-js.svg" alt="Dependency Status"></a></p>
+
+<p>Pigeon is an HTML preprocessor / template engine written in Javascript.</p>
 
 <h1>
 <a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h1>
@@ -61,9 +61,7 @@
             <span class="pl-s"><span class="pl-pds">'</span>.main#ID<span class="pl-pds">'</span></span><span class="pl-k">:</span> {
                 <span class="pl-s"><span class="pl-pds">'</span>.child.child<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>Content<span class="pl-pds">'</span></span>,
                 <span class="pl-s"><span class="pl-pds">'</span>.anotherchild<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>Content<span class="pl-pds">'</span></span>,
-                <span class="pl-s"><span class="pl-pds">'</span><span class="pl-en">.lastchild</span><span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-k">function</span>() {
-                    <span class="pl-k">return</span> data.<span class="pl-c1">content</span>;
-                },
+                <span class="pl-s"><span class="pl-pds">'</span>.lastchild<span class="pl-pds">'</span></span><span class="pl-k">:</span> data.<span class="pl-c1">content</span>
 
             },
         },

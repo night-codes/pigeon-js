@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/avxto/pigeon-js.svg)](https://travis-ci.org/avxto/pigeon-js)
 [![Dependency Status](https://david-dm.org/avxto/pigeon-js.svg)](https://david-dm.org/avxto/pigeon-js)
 
-Pigeon is an HTML preprocessor written in Javascript.
+Pigeon is an HTML preprocessor / template engine written in Javascript.
 
 # Installation
 ```npm install pigeon-js```

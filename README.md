@@ -1,5 +1,6 @@
 # Pigeon
 [![Build Status](https://travis-ci.org/avxto/pigeon-js.svg)](https://travis-ci.org/avxto/pigeon-js)
+[![Coverage Status](https://coveralls.io/repos/avxto/pigeon-js/badge.svg?branch=master&service=github)](https://coveralls.io/github/avxto/pigeon-js?branch=master)
 [![Dependency Status](https://david-dm.org/avxto/pigeon-js.svg)](https://david-dm.org/avxto/pigeon-js)
 
 Pigeon is an HTML preprocessor / template engine written in Javascript.

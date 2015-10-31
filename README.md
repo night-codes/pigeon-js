@@ -79,6 +79,14 @@ pigeon(convert, function(err, html) {
 
 ```
 
+# Todo
+
+- [ ] Support for YAML (Cleaner syntax, no quotation marks and braces)
+
+- [x] Support same properties
+
+- [ ] Support for attributes other than classes and id's. 
+
 # License
 The MIT License is a free software license originating at the Massachusetts Institute of Technology (MIT). It is a permissive free software license, meaning that it permits reuse within proprietary software provided all copies of the licensed software include a copy of the MIT License terms and the copyright notice.
 

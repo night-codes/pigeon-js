@@ -1,6 +1,7 @@
-var expect = require('chai').expect,
-    pigeon = require('../index'),
-    parse = require('../lib/pigeon-parser').parseAttrString;
+var expect = require('chai').expect;
+
+var pigeon = require('../index');
+var parse = require('../lib/pigeon-parser').parseAttrString;
 
 describe('build', function() {
 

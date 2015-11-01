@@ -1,10 +1,10 @@
-var pigeon = require('./lib/pigeon'),
-    beautifyHTML = require('js-beautify').html;
+var pigeon = require('./lib/pigeon');
+var beautifyHTML = require('js-beautify').html;
 
 module.exports = function(obj, callback, options) {
 
-    var callback = callback || function() {},
-        options = options || {};
+    var callback = callback || function() {};
+    var options = options || {};
 
     if (obj !== null && typeof obj !== 'object') {
         var error = new TypeError('Expected an object.');
